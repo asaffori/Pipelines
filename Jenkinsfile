@@ -1,7 +1,12 @@
 pipeline {
-  agent none
+  agent {
+    node {
+      label 'master'
+    }
+
+  }
   stages {
-    stage('') {
+    stage('error') {
       steps {
         bat 'echo 111'
       }
